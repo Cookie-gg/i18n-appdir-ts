@@ -1,5 +1,10 @@
 # Next.js + Turbopack App Directory Playground + i18n (international routing)
+
 Now support both English and Japanese.
+Trying below URL with TypeScript.
+
+Reference: https://dev.to/adrai/i18n-with-nextjs-13-and-app-directory-18dm
+
 ## to do
 - support deep links (e.g. /en/foo/bar)
 
