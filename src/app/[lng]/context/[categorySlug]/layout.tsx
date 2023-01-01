@@ -11,7 +11,7 @@ export default function Layout({ children, params }: PageProps) {
   return (
     <Boundary labels={['Layout [Server Component]']} animateRerendering={false}>
       <div className="space-y-9">
-        <SubCategoryNav category={category} />
+        <SubCategoryNav category={category} lng={params.lng} />
         <Counter />
         <div>{children}</div>
       </div>

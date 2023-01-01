@@ -32,7 +32,7 @@ const AddressBar = () => {
             <span className="text-zinc-600">/</span>
             {pathname
               .split('/')
-              .slice(2)
+              .slice(1)
               .map((segment) => {
                 return (
                   <React.Fragment key={segment}>

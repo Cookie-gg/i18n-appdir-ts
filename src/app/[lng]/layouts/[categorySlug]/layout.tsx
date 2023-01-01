@@ -14,7 +14,7 @@ export default function Layout({
     <div className="space-y-9">
       <div>
         <div className="flex items-center justify-between">
-          <SubCategoryNav category={category} />
+          <SubCategoryNav category={category} lng={params.lng} />
           <div>
             <ClickCounter />
           </div>

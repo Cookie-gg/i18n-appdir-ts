@@ -1,4 +1,4 @@
-type Item = {
+export type Item = {
   name: string;
   items: {
     name: string;

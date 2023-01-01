@@ -1,16 +1,19 @@
 'use client';
 
-import { demos } from '@/lib/demos';
+import { demos, Item } from '@/lib/demos';
 import clsx from 'clsx';
 import { useSelectedLayoutSegments } from 'next/navigation';
 import Link from 'next/link';
+import { useTranslation } from '@/lib/i18n/client';
+import { Lng } from '@/lib/i18n';
 
-export default function GlobalNav() {
+export default function GlobalNav({ lng }: { lng: Lng }) {
   const [selectedLayoutSegments] = useSelectedLayoutSegments();
+  const { t } = useTranslation(lng);
 
   return (
     <div className="space-y-5">
-      {demos.map((demo) => {
+      {t<'demos', Item[]>('demos', { returnObjects: true }).map((demo) => {
         return (
           <div key={demo.name}>
             <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-zinc-500">
@@ -31,10 +34,13 @@ export default function GlobalNav() {
                     </div>
                   ) : (
                     <Link
-                      href={`/${item.slug}`}
+                      href={`/${lng}/${item.slug}`}
                       className={clsx(
                         'block rounded-md px-3 py-2 text-sm font-medium hover:bg-zinc-800 hover:text-zinc-100',
-                        { 'text-zinc-400': !isActive, 'text-white': isActive },
+                        {
+                          'text-zinc-400': !isActive,
+                          'text-white': isActive,
+                        },
                       )}
                     >
                       {item.name}

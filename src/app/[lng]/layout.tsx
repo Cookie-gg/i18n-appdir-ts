@@ -1,13 +1,13 @@
-import '@/styles/globals.css';
+import '../../styles/globals.css';
 import React from 'react';
 import AddressBar from '@/ui/AddressBar';
 import GlobalNav from './GlobalNav';
+import { i18nRoot, languages } from '@/lib/i18n';
+import { LangSwitcher } from '@/ui/LangSwitcher';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// export const generateStaticParams = () => languages.map((lng) => ({ lng }))
+
+const RootLayout: i18nRoot = ({ children, params: { lng } }) => {
   return (
     <html>
       <head>
@@ -16,11 +16,14 @@ export default function RootLayout({
       <body className="overflow-y-scroll bg-zinc-900">
         <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">
           <div className="col-start-2">
-            <GlobalNav />
+            <GlobalNav lng={lng} />
           </div>
 
           <div className="col-start-3 space-y-6">
-            <AddressBar />
+            <div className="flex gap-x-8">
+              <AddressBar />
+              <LangSwitcher lng={lng} />
+            </div>
 
             <div className="rounded-xl border border-zinc-800 bg-black p-8">
               {children}
@@ -55,4 +58,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

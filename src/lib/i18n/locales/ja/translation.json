@@ -1,0 +1,74 @@
+{
+  "demos": [
+    {
+      "name": "レイアウト",
+      "items": [
+        {
+          "name": "ネストレイアウト",
+          "slug": "layouts",
+          "description": "ルートにまたがって共有されるUIを作成する"
+        },
+        {
+          "name": "グループ化されたレイアウト",
+          "slug": "route-groups",
+          "description": "URLのパスに影響を与えずにルートを整理する"
+        },
+  
+        {
+          "name": "サスペンド付きストリーミング",
+          "slug": "streaming",
+          "description": "React Suspenseでサーバーからデータを取得するストリーミング"
+        },
+        {
+          "name": "ルートレイアウト",
+          "slug": "root-layouts",
+          "description": "すべてのルートに適用されるトップレベルのレイアウトを作成する",
+          "isDisabled": true
+        }
+      ]
+    },
+    {
+      "name": "ファイル規約",
+      "items": [
+        {
+          "name": "読み込み",
+          "slug": "loading",
+          "description":
+            "アプリの特定の部分に対して意味のあるローディング UI を作成する"
+        },
+        {
+          "name": "エラー",
+          "slug": "error-handling",
+          "description": "アプリの特定の部分に対するエラーUIを作成する"
+        }
+      ]
+    },
+    {
+      "name": "コンポーネント",
+      "items": [
+        {
+          "name": "フック",
+          "slug": "hooks",
+          "description":
+            "クライアントとサーバーコンポーネントで利用可能なフックをプレビューする"
+        },
+        {
+          "name": "クライアントコンテキスト",
+          "slug": "context",
+          "description":
+            "サーバー/クライアントコンポーネントの境界を越えるクライアントコンポーネント間のコンテキストの受け渡し"
+        }
+      ]
+    },
+    {
+      "name": "Styling",
+      "items": [
+        {
+          "name": "CSSとCSS-in-JS",
+          "slug": "styling",
+          "description": "サポートされているスタイリングソリューションのプレビュー"
+        }
+      ]
+    }
+  ]
+}

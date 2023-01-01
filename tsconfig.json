@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
       "@/ui/*": ["./src/ui/*"],
       "@/lib/*": ["./src/lib/*"],

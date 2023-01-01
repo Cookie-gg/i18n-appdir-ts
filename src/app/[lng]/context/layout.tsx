@@ -1,11 +1,17 @@
 import { fetchCategories } from '@/lib/getCategories';
 import { Boundary } from '@/ui/Boundary';
-import { CounterProvider } from 'app/context/CounterContext';
+import { CounterProvider } from './CounterContext';
 import React, { use } from 'react';
 import CategoryNav from './CategoryNav';
 import ClickCounter from './ClickCounter';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { lng: string };
+}) {
   const categories = use(fetchCategories());
   return (
     <Boundary
