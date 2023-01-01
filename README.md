@@ -1,4 +1,4 @@
-# Next.js + Turbopack App Directory Playground + i18n (international routing)
+# Next.js + App Directory Playground + i18n (international routing)
 
 Now support both English and Japanese.
 Trying below URL with TypeScript.
@@ -7,6 +7,7 @@ Reference: https://dev.to/adrai/i18n-with-nextjs-13-and-app-directory-18dm
 
 ## to do
 - support deep links (e.g. /en/foo/bar)
+- run with turbopack
 
 [Turbopack](https://turbo.build/pack) is a new incremental bundler optimized for JavaScript and TypeScript, written in Rust by the creators of Webpack and Next.js at [Vercel](https://vercel.com). On large applications Turbopack updates 10x faster than Vite and 700x faster than Webpack ([benchmark](https://turbo.build/pack/docs/benchmarks)). For the biggest applications the difference grows even more stark with updates up to 20x faster than Vite.
 
