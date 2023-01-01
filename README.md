@@ -1,5 +1,5 @@
 # Next.js + Turbopack App Directory Playground + i18n (international routing)
-
+Now support both English and Japanese.
 ## to do
 - support deep links (e.g. /en/foo/bar)
 
